@@ -1,9 +1,14 @@
-import "./App.css";
-
+import { BrowserRouter } from "react-router";
+import "./App.scss";
+import  Routes  from "./pages/Routes";
 function App() {
   return (
     <>
-      <div className="card">
+      <BrowserRouter>
+        <Routes />
+      </BrowserRouter>
+
+      {/* <div className="card">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="130"
@@ -27,7 +32,7 @@ function App() {
             Click to chat on WhatsApp
           </a>
         </button>
-      </div>
+      </div> */}
     </>
   );
 }

@@ -1,0 +1,46 @@
+.navbar {
+    // background: $background;
+    border-bottom: $primaryColor 1px solid;
+
+    .brand-logo {
+        color: $primaryColor;
+    }
+
+    .nav-link,
+    .navbar-brand {
+        color: $primaryColor;
+        font-weight: 500;
+        font-size: 1.2rem;
+        margin-right: 1rem;
+
+        &:hover {
+            color: $accent;
+        }
+    }
+
+    .toggleIcon {
+        color: $primaryColor;
+        width: 1.5rem;
+        height: 1.5rem;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $accent;
+        }
+    }
+
+    .navbar-toggler {
+        border-color: $primaryColor;
+
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+
+    .navbar-collapse {
+        // background-color: $background;
+        // padding: 1rem;
+    }
+
+}

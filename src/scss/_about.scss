@@ -1,0 +1,51 @@
+.aboutBg {
+    // background-color: $secondary !important;
+
+    .aboutRight {
+        color: $primaryColor !important;
+        // margin-top: 1rem;
+    }
+
+    .lead {
+        // color: $primaryColor;
+        font-weight: 400;
+    }
+
+    .text-muted {
+        font-family: $foreground !important;
+        line-height: 1.8rem;
+        text-align: justify;
+    }
+
+    .featureIcon {
+        background: $primaryColor;
+        width: 24px;
+        height: 24px;
+    }
+
+    // .leftLineQuote {
+    //     background-color: #f8f9fa;
+    //     border-left: 4px solid $primaryColor;
+    // }
+
+
+    .featureDiv {
+        background: $background;
+        box-shadow: 0 2px 4px $border !important;
+
+        .featureBadges {
+            color: $primaryColor !important;
+        }
+    }
+
+    .aboutImg {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: none;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .aboutImg:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 20px $accent;
+    }
+}

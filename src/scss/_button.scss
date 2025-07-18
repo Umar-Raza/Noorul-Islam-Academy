@@ -1,0 +1,157 @@
+// .mainButton {
+//     appearance: none;
+//     background-color: #fafbfc;
+//     border: $primaryColor 1px solid;
+//     border-radius: 6px;
+//     box-shadow:
+//         rgba(27, 31, 35, 0.04) 0 1px 0,
+//         rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+//     box-sizing: border-box;
+//     color: $primaryColor;
+//     cursor: pointer;
+//     display: inline-block;
+//     font-size: 14px;
+//     font-weight: 500;
+//     font-size: 1rem;
+//     line-height: 20px;
+//     list-style: none;
+//     padding: 6px 16px;
+//     position: relative;
+//     transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+//     user-select: none;
+//     -webkit-user-select: none;
+//     touch-action: manipulation;
+//     vertical-align: middle;
+//     white-space: nowrap;
+//     word-wrap: break-word;
+// }
+
+// .mainButton:hover {
+//     // background-color: $primaryColor;
+//     // color: $background;
+//     text-decoration: none;
+//     transition-duration: 0.1s;
+// }
+
+// .mainButton:disabled {
+//     background-color: #fafbfc;
+//     border-color: rgba(27, 31, 35, 0.15);
+//     color: #959da5;
+//     cursor: default;
+// }
+
+// .mainButton:active {
+//     background-color: #edeff2;
+//     box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+//     transition: none 0s;
+// }
+
+// .mainButton:focus {
+//     outline: 1px transparent;
+// }
+
+// .mainButton:before {
+//     display: none;
+// }
+
+// .mainButton:-webkit-details-marker {
+//     display: none;
+// }
+
+/// Register button
+///
+///  
+.registerBtn {
+    appearance: none;
+    background-color: $primaryColor;
+    border: $primaryColor 1px solid;
+    border-radius: 6px;
+    box-shadow:
+        rgba(27, 31, 35, 0.04) 0 1px 0,
+        rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+    box-sizing: border-box;
+    color: $background;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.5;
+    list-style: none;
+    padding: 6px 16px;
+    position: relative;
+    text-decoration: none;
+    transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+    word-wrap: break-word;
+
+    .registerLink {
+        color: $background;
+        text-decoration: none;
+    }
+
+}
+
+.registerBtn:hover {
+    background-color: $background;
+    color: $primaryColor !important;
+    text-decoration: none;
+    transition-duration: 0.1s;
+}
+
+
+.registerBtn {
+    :disabled {
+        background-color: #fafbfc;
+        border-color: rgba(27, 31, 35, 0.15);
+        color: #959da5;
+        cursor: default;
+    }
+}
+
+.registerBtn {
+    :active {
+        background-color: #edeff2;
+        box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+        transition: none 0s;
+    }
+}
+
+.registerBtn {
+    :focus {
+        outline: 1px transparent;
+    }
+}
+
+.registerBtn {
+    :before {
+        display: none;
+    }
+
+    .registerBtn {
+        :-webkit-details-marker {
+            display: none;
+        }
+    }
+}
+
+
+@media (max-width: 990px) {
+
+
+    .registerLink {
+        // width: 100% !important;
+        // display: block;
+
+        .registerBtn {
+            width: 100% !important;
+        }
+    }
+}
+
+button {
+    text-decoration: none !important;
+}
