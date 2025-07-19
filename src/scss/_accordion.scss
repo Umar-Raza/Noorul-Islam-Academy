@@ -1,0 +1,19 @@
+.accordion-container {
+    .accordion-button {
+        background-color: $light !important;
+        color: $foreground !important;
+        padding: 0.75rem 1.25rem;
+        font-size: 1rem;
+        font-weight: 500;
+        transition: background-color 0.3s ease, color 0.3s ease;
+
+    }
+
+    .accordion-button:focus {
+        background-color: #E5F8FD !important;
+        color: $foreground !important;
+        border: $primaryColor 1px solid !important;
+        box-shadow: none !important;
+    }
+
+}

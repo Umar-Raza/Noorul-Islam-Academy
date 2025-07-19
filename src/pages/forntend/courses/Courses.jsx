@@ -1,4 +1,4 @@
-import React from "react";
+
 import CoursesData from "../../../constant/courseData/CoursesData";
 
 export default function Courses() {

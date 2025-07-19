@@ -3,6 +3,8 @@ import Navbar from "../../../components/header/navbar/Navbar";
 import HeroSection from "../../../components/header/hero/HeroSection";
 import About from "../about/About";
 import Courses from "../courses/Courses";
+import WhyChooseUs from "../../../components/whyChooseUs/WhyChooseUs";
+import { Accordian } from "../../../components/accordian/Accordian";
 
 export const Home = () => {
   return (
@@ -11,6 +13,8 @@ export const Home = () => {
       <HeroSection className="w-100" />
       <About />
       <Courses />
+      <WhyChooseUs />
+      <Accordian />
     </div>
   );
 };

@@ -1,0 +1,28 @@
+.whyChooseUs {
+
+
+    .bgIcon {
+        background-color: #e5f8fd;
+        width: 80px;
+        height: 80px;
+
+        .iconColor {
+            color: $primaryColor;
+        }
+
+
+    }
+
+    .hover-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hover-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    }
+
+    .bg-light {
+        background-color: #f8f9fa !important;
+    }
+}

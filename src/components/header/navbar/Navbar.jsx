@@ -1,7 +1,7 @@
 import { useState } from "react";
 import {Text } from "lucide-react";
 import { Link } from "react-router";
-import logo from "../../../assets/logolarge.png";
+import logo from "../../../assets/brandIcon.png";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const toggleNavbar = () => {
