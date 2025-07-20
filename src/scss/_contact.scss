@@ -1,0 +1,32 @@
+.contactPage {
+    padding: 2rem;
+
+    .icon-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        background-color: #e5f8fd;
+        width: 80px;
+        height: 80px;
+
+        .contact-icon {
+            color: $primaryColor;
+        }
+
+
+    }
+
+    .phone,
+    .email {
+        color: $foreground !important;
+        text-decoration: none !important;
+    }
+
+    .phone:hover,
+    .email:hover {
+        text-decoration: underline !important;
+        color: $primaryColor !important;
+
+    }
+}

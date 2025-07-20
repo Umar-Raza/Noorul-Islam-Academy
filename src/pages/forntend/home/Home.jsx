@@ -4,7 +4,8 @@ import HeroSection from "../../../components/header/hero/HeroSection";
 import About from "../about/About";
 import Courses from "../courses/Courses";
 import WhyChooseUs from "../../../components/whyChooseUs/WhyChooseUs";
-import { Accordian } from "../../../components/accordian/Accordian";
+import { Accordion } from "../../../components/accordion/Accordion";
+import { Contact } from "../contact/contact";
 
 export const Home = () => {
   return (
@@ -14,7 +15,8 @@ export const Home = () => {
       <About />
       <Courses />
       <WhyChooseUs />
-      <Accordian />
+      <Contact />
+      <Accordion />
     </div>
   );
 };

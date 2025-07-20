@@ -1,7 +1,7 @@
 import features from "../../constant/whyChooseUs/WhyChooseUs";
 export default function ChooseUs() {
   return (
-    <section className="whyChooseUs py-5 bg-light">
+    <section className="whyChooseUs py-5 mt-5 bg-light">
       <div className="container">
         {/* Header */}
         <div className="row justify-content-center mb-5">

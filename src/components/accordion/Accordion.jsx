@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Accordian = () => {
+export const Accordion = () => {
   return (
     <div className="container accordion-container my-5">
       <div className="accordion" id="accordionPanelsStayOpenExample">

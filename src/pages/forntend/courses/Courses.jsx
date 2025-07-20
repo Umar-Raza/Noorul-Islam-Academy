@@ -19,7 +19,7 @@ export default function Courses() {
       <div className="row g-4">
         {CoursesData.map((items, index) => (
           <div
-            className="col-sm-6 col-md-4 col-lg-4 mt-4 courseCard"
+            className="col-md-6 col-lg-4 mt-4 ujcourseCard"
             key={index}
           >
             <div className="card h-100">
@@ -33,7 +33,6 @@ export default function Courses() {
                 </div>
                 <div className="card-block">
                   <h5 className="card-title text-center">{items.hadding}</h5>
-
                   <p className="card-text small">{items.paragaraph}</p>
                 </div>
                 <div className="card-footer d-flex justify-content-center align-items-center w-100">
