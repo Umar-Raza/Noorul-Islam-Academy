@@ -65,7 +65,7 @@ export default function Navbar() {
 
           {/* Right side Register button */}
           <div className="d-flex">
-            <Link className="registerLink" to="/register">
+            <Link className="registerLink" to="/registration">
               <button type="button" className="registerBtn btn-lg">
                 Register now
               </button>

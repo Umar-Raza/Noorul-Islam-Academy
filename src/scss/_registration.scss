@@ -1,0 +1,97 @@
+.bg_Color {
+    background-color: $light;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .card {
+        margin: 0 auto;
+        margin-top: 9rem;
+        margin-bottom: 1rem;
+
+        .contactHadding {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $primaryColor;
+
+            h1 {
+                text-align: center;
+
+            }
+        }
+
+        .card-body {
+            margin: 0 auto;
+            // width: 80%;
+
+
+            .form-floating {
+                margin-top: 1rem;
+
+                .form-control:focus {
+                    border-color: $primaryColor;
+                    box-shadow: 0 0 0 0.1rem $accent;
+                }
+
+                .form-select:focus {
+                    border-color: $primaryColor;
+                    box-shadow: 0 0 0 0.1rem $accent;
+                }
+
+                .error-msg {
+                    margin: 0;
+                    padding: 0%;
+                    color: red;
+                }
+            }
+
+            .register_btn {
+                display: flex;
+                align-items: center;
+                justify-content: center !important;
+                margin: 2rem 0 2rem;
+            }
+        }
+
+        .backToHome {
+            .backToHomeLink {
+                text-decoration: none;
+                color: $background;
+            }
+        }
+
+        .btn:hover {
+            .backToHomeLink {
+
+                color: $primaryColor;
+            }
+
+            .btn {
+                border: 1px solid;
+            }
+
+            .bi {
+                color: $primaryColor;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    .bg_Color {
+        .card {
+            padding: 1.5rem;
+            width: 80%;
+            margin-top: 0% !important;
+            margin-bottom: 0% !important;
+        }
+
+    }
+}
