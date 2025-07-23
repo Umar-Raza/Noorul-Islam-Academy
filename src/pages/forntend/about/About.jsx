@@ -5,15 +5,14 @@ export default function About() {
     <div className="aboutBg bg-light py-5" id="about">
       <div className="container" id="about">
         {/* Header Section */}
-        <div className="text-center mb-5">
+        <div className="text-center mb-5 mt-3 mt-md-4">
           <h1 className="display-4 fw-bold text-dark mb-3">About Us</h1>
           <div className="bottomLine mx-auto mb-3"></div>
-          <p className="text-center lead">
+          <p className="text-center lead mt-md-3">
             Established in 2022 with a mission to spread Quranic education
             worldwide
           </p>
         </div>
-
         {/* Main Content Section */}
         <div className="row">
           {/* Left Image Section */}

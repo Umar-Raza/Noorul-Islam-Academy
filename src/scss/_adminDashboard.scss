@@ -1,0 +1,71 @@
+.bgDashboard {
+    // width: 100%;
+    min-height: 100vh !important;
+    background-color: $secondary;
+
+    .spinner,
+    .bi {
+        color: $primaryColor;
+        font-size: 250;
+    }
+
+
+
+    .container-fluid {
+        .navbar {
+            background: $background;
+
+            h2 {
+                color: $primaryColor;
+                font-weight: bold;
+                text-align: center !important;
+            }
+        }
+
+    }
+
+    .form-select:focus,
+    .form-control:focus {
+        border-color: $primaryColor;
+        box-shadow: 0 0 0 0.1rem $accent;
+    }
+
+    .modal-header {
+        background: $primaryColor;
+    }
+
+    .card {
+        .card-header {
+            background: $primaryColor;
+        }
+    }
+
+    .textAndLoader {
+        color: $primaryColor;
+    }
+
+    .studentInfo {
+        .studentName {
+            color: $primaryColor;
+        }
+    }
+
+    @media only screen and (max-width: 750px) {
+        .container-fluid {
+            .navbar {
+                .container {
+                    justify-content: center !important;
+                    text-align: center !important;
+
+                    .navbar-nav {
+                        .mainButton {
+                            font-size: 13px;
+                            margin-top: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

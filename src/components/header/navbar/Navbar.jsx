@@ -42,24 +42,24 @@ export default function Navbar() {
         >
           <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link" aria-current="page" to="/">
+              <a className="nav-link" aria-current="page" href="#home">
                 Home
-              </Link>
+              </a>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/about">
+              <a className="nav-link" href="#about">
                 About
-              </Link>
+              </a>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/courses">
+              <a className="nav-link" href="#courses">
                 Courses
-              </Link>
+              </a>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/contact">
+              <a className="nav-link" href="#contact">
                 Contact
-              </Link>
+              </a>
             </li>
           </ul>
 

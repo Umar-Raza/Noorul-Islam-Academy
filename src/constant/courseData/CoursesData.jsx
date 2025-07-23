@@ -13,7 +13,7 @@ const CoursesData = [
     paragaraph:
       "Learn Quran Nazra for fluent reading and accurate recitation. Master proper pronunciation and correct letter origins through Tajweed. This ensures a precise and spiritually enriching Quranic recitation.",
     enroll: (
-      <Link className="registerBtn " to="/registration">
+      <Link className="mainButton " to="/registration">
         Apply Now
       </Link>
     ),
@@ -24,7 +24,7 @@ const CoursesData = [
     paragaraph:
       "Our Quran translation program offers profound understanding of divine rulings and commandments, Allah's comprehensive guidance. This study empowers you to apply Quranic wisdom.",
     enroll: (
-      <Link className="registerBtn" to="/registration">
+      <Link className="mainButton" to="/registration">
         Apply Now
       </Link>
     ),
@@ -35,7 +35,7 @@ const CoursesData = [
     paragaraph:
       "In this comprehensive course, students will diligently read, translate, and explain the Holy Quran. They will also receive personalized and extra attention from our highly experienced and qualified teachers.",
     enroll: (
-      <Link className="registerBtn" to="/registration">
+      <Link className="mainButton" to="/registration">
         Apply Now
       </Link>
     ),
@@ -47,7 +47,7 @@ const CoursesData = [
     paragaraph:
       "Dars-e-Nizami offers a comprehensive Islamic education, covering Quran, Hadith, Fiqh, Arabic language, & logic. It's a traditional curriculum for deep religious scholarship, of Islamic sciences.",
     enroll: (
-      <Link className="registerBtn" to="/registration">
+      <Link className="mainButton" to="/registration">
         Apply Now
       </Link>
     ),
@@ -58,7 +58,7 @@ const CoursesData = [
     paragaraph:
       "In this vital Farz Uloom course, you will learn the basic fundamental rulings of Sharia via a comprehensive book, which is indeed obligatory for every sane male and female.",
     enroll: (
-      <Link className="registerBtn" to="/registration">
+      <Link className="mainButton" to="/registration">
         Apply Now
       </Link>
     ),
@@ -69,7 +69,7 @@ const CoursesData = [
     paragaraph:
       "Encourage your children to learn essential duas from a very tender age. Our comprehensive Dua Book consists of numerous vital supplications that your kids should start memorizing at an early, crucial age.",
     enroll: (
-      <Link className="registerBtn" to="/registration">
+      <Link className="mainButton" to="/registration">
         Apply Now
       </Link>
     ),

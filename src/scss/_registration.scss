@@ -1,5 +1,5 @@
 .bg_Color {
-    background-color: $light;
+    background-color: $secondary;
     position: absolute;
     top: 0;
     left: 0;
@@ -15,11 +15,7 @@
         margin-top: 9rem;
         margin-bottom: 1rem;
 
-        .contactHadding {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: $primaryColor;
+        .resgisterHadding {
 
             h1 {
                 text-align: center;
@@ -42,7 +38,7 @@
 
                 .form-select:focus {
                     border-color: $primaryColor;
-                    box-shadow: 0 0 0 0.1rem $accent;
+                    box-shadow: 0 0 0 0.1rem $accent ;
                 }
 
                 .error-msg {
@@ -52,33 +48,25 @@
                 }
             }
 
-            .register_btn {
-                display: flex;
-                align-items: center;
-                justify-content: center !important;
-                margin: 2rem 0 2rem;
-            }
+            // .registerBtn {
+            //     display: flex ;
+            //     align-items: center ;
+            //     justify-content: center ;
+            //     margin: 2rem 0 2rem;
+            // }
         }
 
         .backToHome {
+
             .backToHomeLink {
                 text-decoration: none;
-                color: $background;
+                // color: $background;
             }
         }
 
-        .btn:hover {
-            .backToHomeLink {
-
-                color: $primaryColor;
-            }
-
-            .btn {
-                border: 1px solid;
-            }
-
+        .registerBtn:hover {
             .bi {
-                color: $primaryColor;
+                // color: $background;
             }
         }
     }

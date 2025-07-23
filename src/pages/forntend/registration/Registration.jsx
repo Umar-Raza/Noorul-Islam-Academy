@@ -1,103 +1,105 @@
-// import { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router";
-// import { addDoc, collection, serverTimestamp } from "firebase/firestore";
-// import { firestore } from "../../config/firebase";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { firestore } from "../../../config/Firebase";
 import countries from "../../../constant/contries/countries";
-
-// const initialState = {
-//   fullName: "",
-//   fatherName: "",
-//   birthday: "",
-//   gender: "",
-//   course: "",
-//   email: "",
-//   whatsAppNo: "",
-//   address: "",
-//   countryCode: "+92", // Default to Pakistan's country code
-// };
+import "bootstrap-icons/font/bootstrap-icons.css";
+const initialState = {
+  fullName: "",
+  fatherName: "",
+  birthday: "",
+  gender: "",
+  course: "",
+  email: "",
+  whatsAppNo: "",
+  address: "",
+  countryCode: "+92", // Default to Pakistan's country code
+};
 
 export default function Registration() {
-  // const [state, setState] = useState(initialState);
-  // const [isLoading, setIsLoading] = useState(false);
+  const [state, setState] = useState(initialState);
+  const [isLoading, setIsLoading] = useState(false);
 
-  // const handleChange = (e) =>
-  //   setState((s) => ({ ...s, [e.target.name]: e.target.value }));
+  const handleChange = (e) =>
+    setState((s) => ({ ...s, [e.target.name]: e.target.value }));
 
-  // const handleRegister = async (e) => {
-  //   e.preventDefault();
+  const handleRegister = async (e) => {
+    e.preventDefault();
 
-  //   let {
-  //     fullName,
-  //     fatherName,
-  //     birthday,
-  //     gender,
-  //     course,
-  //     address,
-  //     email,
-  //     whatsAppNo,
-  //     countryCode, // Destructure countryCode from state
-  //   } = state;
+    let {
+      fullName,
+      fatherName,
+      birthday,
+      gender,
+      course,
+      address,
+      email,
+      whatsAppNo,
+      countryCode, // Destructure countryCode from state
+    } = state;
 
-  //   // Validation
-  //   if (
-  //     !fullName.trim() ||
-  //     !fatherName.trim() ||
-  //     !birthday ||
-  //     !gender ||
-  //     !course ||
-  //     !email ||
-  //     !whatsAppNo.trim()
-  //   ) {
-  //     if (typeof window.toastify === "function") {
-  //       window.toastify("Please fill in all required fields", "error");
-  //     } else {
-  //       alert("Please fill in all required fields");
-  //     }
-  //     return;
-  //   }
-  //   fullName = fullName.trim();
-  //   fatherName = fatherName.trim();
-  //   birthday = birthday.trim();
-  //   address = address.trim();
-  //   whatsAppNo = whatsAppNo.trim();
+    // Validation
+    if (
+      !fullName.trim() ||
+      !fatherName.trim() ||
+      !birthday ||
+      !gender ||
+      !course ||
+      !email ||
+      !whatsAppNo.trim()
+    ) {
+      if (typeof window.toastify === "function") {
+        window.toastify("Please fill in all required fields", "error");
+      } else {
+        alert("Please fill in all required fields");
+      }
+      return;
+    }
+    fullName = fullName.trim();
+    fatherName = fatherName.trim();
+    birthday = birthday.trim();
+    address = address.trim();
+    whatsAppNo = whatsAppNo.trim();
 
-  //   // Combine the country code and WhatsApp number for storage
-  //   const fullWhatsAppNo = countryCode + whatsAppNo;
+    // Combine the country code and WhatsApp number for storage
+    const fullWhatsAppNo = countryCode + whatsAppNo;
 
-  //   const formData = {
-  //     fullName,
-  //     fatherName,
-  //     birthday,
-  //     gender,
-  //     course,
-  //     whatsAppNo: fullWhatsAppNo, // Store the combined WhatsApp number
-  //     address,
-  //     email,
-  //     dateCreated: serverTimestamp(),
-  //   };
+    const formData = {
+      fullName,
+      fatherName,
+      birthday,
+      gender,
+      course,
+      whatsAppNo: fullWhatsAppNo, // Store the combined WhatsApp number
+      address,
+      email,
+      dateCreated: serverTimestamp(),
+    };
 
-  //   setIsLoading(true);
-  //   try {
-  //     const docRef = await addDoc(
-  //       collection(firestore, "registration"),
-  //       formData
-  //     );
-  //     if (typeof window.toastify === "function") {
-  //       window.toastify("You are successfully registered!", "success");
-  //     } else {
-  //       alert("You are successfully registered!");
-  //     }
-  //     setState(initialState);
-  //   } catch (e) {
-  //     console.error("Error adding document: ", e);
-  //     if (typeof window.toastify === "function") {
-  //       window.toastify("Something went wrong while registering.", "error");
-  //     } else {
-  //       alert("Something went wrong while registering.");
-  //     }
-  //   }
-  //   setIsLoading(false);
-  // };
+    setIsLoading(true);
+    try {
+      await addDoc(
+        collection(firestore, "registration"),
+        formData
+      );
+      if (typeof window.toastify === "function") {
+        window.toastify("You are successfully registered!", "success");
+      } else {
+        alert("You are successfully registered!");
+      }
+      setState(initialState);
+    } catch (e) {
+      console.error("Error adding document: ", e);
+      if (typeof window.toastify === "function") {
+        window.toastify("Something went wrong while registering.", "error");
+      } else {
+        alert("Something went wrong while registering.");
+      }
+    }
+    setIsLoading(false);
+  };
+
+  // Import Bootstrap Icons if not already imported
 
   return (
     <div className="bg_Color">
@@ -106,34 +108,35 @@ export default function Registration() {
           <div className="col">
             <div className="card shadow-md">
               <div className="backToHome p-3">
-                <Link className="registerBtn btn-md" to="/">
+                <Link className="registerBtn" to="/">
                   <i className="bi bi-house-fill me-2"></i>
                   Back to Home
                 </Link>
               </div>
-              <div className="mb-0 text-center">
-                <h4>Registration</h4>
+              <div className="resgisterHadding mb-0 text-center">
+                <h2>Registration</h2>
                 <div className="bottomLine m-auto mb-3"></div>
                 <p className="text-muted mb-0 mt-0">
                   Fill in your details to register for courses
                 </p>
               </div>
+
               <div className="card-body">
-                <form>
+                <form onSubmit={handleRegister}>
                   <div className="row">
                     <div className="col-12 col-md-6">
                       <div className="form-floating">
                         <input
                           type="text"
                           className="form-control"
-                          // onChange={handleChange}
+                          onChange={handleChange}
                           placeholder="Full Name"
                           required
-                          // value={state.fullName}
+                          value={state.fullName}
                           name="fullName"
                           id="fullName"
                         />
-                        <label htmlFor="fullName">Full Name *</label>
+                        <label htmlFor="fullName">Full Name*</label>
                       </div>
                     </div>
 
@@ -142,14 +145,14 @@ export default function Registration() {
                         <input
                           type="text"
                           className="form-control"
-                          // onChange={handleChange}
+                          onChange={handleChange}
                           placeholder="Father Name"
                           required
-                          // value={state.fatherName}
+                          value={state.fatherName}
                           name="fatherName"
                           id="fatherName"
                         />
-                        <label htmlFor="fatherName">Father Name *</label>
+                        <label htmlFor="fatherName">Father Name*</label>
                       </div>
                     </div>
 
@@ -158,13 +161,13 @@ export default function Registration() {
                         <input
                           type="date"
                           className="form-control"
-                          // onChange={handleChange}
+                          onChange={handleChange}
                           required
-                          // value={state.birthday}
+                          value={state.birthday}
                           name="birthday"
                           id="birthday"
                         />
-                        <label htmlFor="birthday">Date of Birth *</label>
+                        <label htmlFor="birthday">Date of Birth*</label>
                       </div>
                     </div>
 
@@ -173,10 +176,10 @@ export default function Registration() {
                         <select
                           className="form-select"
                           aria-label="Default select example"
-                          // value={state.gender}
+                          value={state.gender}
                           required
                           name="gender"
-                          // onChange={handleChange}
+                          onChange={handleChange}
                           id="gender"
                         >
                           <option selected>Choose...</option>
@@ -184,7 +187,7 @@ export default function Registration() {
                           <option value="female">Female</option>
                           <option value="others">Others</option>
                         </select>
-                        <label htmlFor="gender">Gender *</label>
+                        <label htmlFor="gender">Gender*</label>
                       </div>
                     </div>
 
@@ -193,10 +196,10 @@ export default function Registration() {
                         <select
                           className="form-select"
                           aria-label="Default select example"
-                          // value={state.course}
+                          value={state.course}
                           required
                           name="course"
-                          // onChange={handleChange}
+                          onChange={handleChange}
                           id="course"
                         >
                           <option value="">Choose a course...</option>
@@ -220,12 +223,12 @@ export default function Registration() {
                           className="form-control"
                           placeholder="name@example.com"
                           required
-                          // value={state.email}
-                          // onChange={handleChange}
+                          value={state.email}
+                          onChange={handleChange}
                           name="email"
                           id="email"
                         />
-                        <label htmlFor="email">Email Address *</label>
+                        <label htmlFor="email">Email Address*</label>
                       </div>
                     </div>
 
@@ -237,10 +240,10 @@ export default function Registration() {
                         >
                           <select
                             className="form-select rounded-start"
-                            // value={state.countryCode}
+                            value={state.countryCode}
                             required
                             name="countryCode"
-                            // onChange={handleChange}
+                            onChange={handleChange}
                             id="countryCode"
                           >
                             {countries.map((country) => (
@@ -259,10 +262,10 @@ export default function Registration() {
                           <input
                             type="tel"
                             className="form-control rounded-end"
-                            // onChange={handleChange}
+                            onChange={handleChange}
                             placeholder="WhatsApp number"
                             required
-                            // value={state.whatsAppNo}
+                            value={state.whatsAppNo}
                             name="whatsAppNo"
                             id="whatsAppNo"
                           />
@@ -276,27 +279,26 @@ export default function Registration() {
                         <input
                           type="text"
                           className="form-control"
-                          // onChange={handleChange}
+                          onChange={handleChange}
                           placeholder="Your Country"
                           required
-                          // value={state.address}
+                          value={state.address}
                           name="address"
                           id="address"
                         />
                         <label htmlFor="address">Country*</label>
                       </div>
                     </div>
-
                     <div className="col-12 text-center mt-4">
-                      <button className="registerBtn w-50">Register</button>
-                      {/* <button
-                        className="btn px-5"
+                      <button
+                        className={`registerBtn px-5 registerBtn${isLoading ? " disabled" : ""}`}
                         type="submit"
                         disabled={isLoading}
+                        style={isLoading ? { pointerEvents: "none", opacity: 0.65 } : {}}
                       >
                         {!isLoading ? (
                           <>
-                            <i className="bi bi-person-plus me-2"></i>
+                            <i className="bi bi-person-plus me-2" ></i>
                             Register Now
                           </>
                         ) : (
@@ -304,15 +306,12 @@ export default function Registration() {
                             <span
                               className="spinner-border spinner-border-sm me-2"
                               role="status"
-                            >
-                              <span className="visually-hidden">
-                                Loading...
-                              </span>
-                            </span>
+                              aria-hidden="true"
+                            ></span>
                             Processing...
                           </>
                         )}
-                      </button> */}
+                      </button>
                     </div>
                   </div>
                 </form>
