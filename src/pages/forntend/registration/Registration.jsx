@@ -108,7 +108,7 @@ export default function Registration() {
           <div className="col">
             <div className="card shadow-md">
               <div className="backToHome p-3">
-                <Link className="registerBtn" to="/">
+                <Link className="mainButton" to="/">
                   <i className="bi bi-house-fill me-2"></i>
                   Back to Home
                 </Link>
@@ -211,6 +211,7 @@ export default function Registration() {
                           <option value="Namaz Course">Darse Nazami</option>
                           <option value="Farz Uloom">Farz Uloom</option>
                           <option value="Dua Book">Dua Book</option>
+                          <option value="Tajweed Course">Tajweed Course</option>
                         </select>
                         <label htmlFor="course">Course*</label>
                       </div>
@@ -291,7 +292,7 @@ export default function Registration() {
                     </div>
                     <div className="col-12 text-center mt-4">
                       <button
-                        className={`registerBtn px-5 registerBtn${isLoading ? " disabled" : ""}`}
+                        className={`mainButton px-5 mainButton${isLoading ? " disabled" : ""}`}
                         type="submit"
                         disabled={isLoading}
                         style={isLoading ? { pointerEvents: "none", opacity: 0.65 } : {}}

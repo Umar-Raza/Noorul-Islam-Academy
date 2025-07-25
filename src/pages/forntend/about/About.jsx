@@ -8,8 +8,8 @@ export default function About() {
         <div className="text-center mb-5 mt-3 mt-md-4">
           <h1 className="display-4 fw-bold text-dark mb-3">About Us</h1>
           <div className="bottomLine mx-auto mb-3"></div>
-          <p className="text-center lead mt-md-3">
-            Established in 2022 with a mission to spread Quranic education
+          <p className="text-center lead text-muted mt-md-3">
+            Established in 2020 with a mission to spread Quranic education
             worldwide
           </p>
         </div>
@@ -36,13 +36,7 @@ export default function About() {
                 Your Trusted Partner in Islamic Education
               </h2>
               <p className="text-muted mb-4">
-                Our Academy, established in Pakistan in 2022, is a premier
-                institution committed to delivering exceptional Quranic
-                education to a global student body. We have rapidly become a
-                prominent online Islamic academy. Our curriculum is designed to
-                be comprehensive, offering courses that include Quran recitation
-                with Tajweed, memorization of the Quran (Hifz ul Quran), Namaz &
-                Kalmas, Arabic language, and various Islamic studies.
+                "Our Academy, established in Pakistan in 2020 by the esteemed <strong>Mufti Sufyan Sarwar Madni</strong>, is a premier institution committed to delivering exceptional Quranic education to a global student body. Under his vision and guidance, we have rapidly become a prominent online Islamic academy. Our curriculum is designed to be comprehensive, offering courses that include Quran recitation with Tajweed, memorization of the Quran (Hifz ul Quran), Namaz & Kalmas, Arabic language, and various Islamic studies."
               </p>
               <p className="text-muted mb-4 ">
                 We are distinguished by our team of highly qualified male and

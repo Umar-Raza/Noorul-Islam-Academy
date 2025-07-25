@@ -12,7 +12,7 @@
 // @import "bootstrap/mixins";
 // @import "bootstrap/utilities";
 
-$light: #F8F9FA ;
+$light: #F8F9FA;
 $primaryColor: #27a3be !default;
 $foreground: #090b0b !default;
 $background: #ffffff !default;
@@ -20,3 +20,8 @@ $secondary: #d6dadb !default;
 $accent: #a8ced6 !default;
 $muted-foreground: #518995 !default;
 $border: #C9CECF !default;
+
+
+.notFoundBg {
+    background-color: $light;
+}

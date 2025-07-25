@@ -1,24 +1,33 @@
 import React from "react";
 import { Contact } from "./forntend/contact/contact";
-import { Route, Routes } from "react-router";
+import { Navigate, Route, Routes } from "react-router";
 // import { Courses } from "./forntend/courses/Courses";
-import { Nopage } from "./forntend/noPage/Nopage";
+import { NoPage } from "./forntend/noPage/Nopage";
 import { Home } from "./forntend/home/Home";
 import Registration from "./forntend/registration/Registration";
-import {AdminDashboard} from "../pages/dashboard/admin/AdminDashboard"
+import { AdminDashboard } from "./dashboard/admindashboard/AdminDashboard"
+import { AdminLogin } from "./dashboard/auth/AdminLogin";
+import { ProtectedRouteForAdmin } from "./dashboard/auth/ProtectedRouteForAdmin";
 const Index = () => {
   return (
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<Contact />} />
-        {/* <Route path="/courses" element={<Courses />} /> */}
         <Route path="/registration" element={<Registration />} />
-        <Route path="/adminDashboard" element={<AdminDashboard />} />
-        <Route path="/*" element={<Nopage />} />
+        <Route path="/adminLogin" element={<AdminLogin />} />
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedRouteForAdmin>
+              <AdminDashboard />
+            </ProtectedRouteForAdmin>
+          }
+        />
+        <Route path="/*" element={<NoPage />} />
       </Routes>
     </div>
   );
 };
 
 export default Index;
+

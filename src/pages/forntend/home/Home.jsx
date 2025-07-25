@@ -7,7 +7,7 @@ import WhyChooseUs from "../../../components/whyChooseUs/WhyChooseUs";
 import { Accordion } from "../../../components/accordion/Accordion";
 import { Contact } from "../contact/contact";
 import { Footer } from "../../../components/footer/Footer";
-
+import  Testimonials  from "../../../components/testimonials/Testimonials"
 export const Home = () => {
   return (
     <div className="home" id="home">
@@ -16,8 +16,8 @@ export const Home = () => {
       <About />
       <Courses />
       <WhyChooseUs />
+      <Testimonials />
       <Contact />
-      <Accordion />
       <Footer />
     </div>
   );

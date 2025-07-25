@@ -151,7 +151,7 @@ export const AdminDashboard = () => {
     );
 
     return () => unsubscribe();
-  }, [students, students.length]);
+  }, []);
 
   // Filter and search functionality
   useEffect(() => {
@@ -197,17 +197,14 @@ export const AdminDashboard = () => {
       default:
         break;
     }
-
     setFilteredStudents(filtered);
   }, [students, searchTerm, selectedCourse, sortBy]);
-
   const handleDelete = async (student) => {
     if (
       !window.confirm(`Are you sure you want to delete ${student.fullName}?`)
     ) {
       return;
     }
-
     try {
       await deleteDoc(doc(firestore, "registration", student.id));
       window.toastify(
@@ -237,20 +234,16 @@ export const AdminDashboard = () => {
       return "N/A";
     }
   };
-
   // Statistics
   const studentsToday = students.filter((student) =>
     isToday(student.dateCreated)
   );
-
-  const courses = [...new Set(students.map((s) => s.course).filter(Boolean))];
-
+  const courses = [...new Set(students.map((s) => s.course).filter(Boolean))]
   // logout function
   const logout = () => {
     localStorage.clear("admin");
     navigate("/adminLogin");
   };
-
   return (
     <div className="bgDashboard">
       <div className="container-fluid">
@@ -461,17 +454,17 @@ export const AdminDashboard = () => {
                                   {student.fullName}
                                 </div>
                                 <small className="text-muted">
-                                  <span className="fw-bold">Father:</span>{" "}
+                                  <span className="fw-bold">Father:</span>
                                   {student.fatherName}
                                 </small>
                                 <br />
                                 <small className="text-muted">
-                                  <span className="fw-bold"> DOB:</span>{" "}
+                                  <span className="fw-bold"> DOB:</span>
                                   {student.birthday}
                                 </small>
                                 <br />
                                 <small className="text-muted">
-                                  <span className="fw-bold">Gender:</span>{" "}
+                                  <span className="fw-bold">Gender:</span>
                                   {student.gender}
                                 </small>
                               </div>

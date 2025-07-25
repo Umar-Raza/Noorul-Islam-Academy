@@ -3,7 +3,7 @@ import React from "react";
 
 export const Contact = () => {
   return (
-    <div className="container contactPage" id="contact">
+    <div className="container mb-4 contactPage" id="contact">
       <div className="row">
         <div className="col mt-5 mb-4">
           <div className="text-center">
@@ -17,7 +17,7 @@ export const Contact = () => {
       </div>
       <div className="row g-0">
         {/* Call Today */}
-        <div className="col-lg-3 col-md-6 mb-5">
+        <div className="col-lg-3 col-md-6">
           <div className="contact-card text-center">
             <div className="icon-wrapper mb-3 rounded-circle">
               <Phone size={40} className="contact-icon " />
@@ -27,7 +27,7 @@ export const Contact = () => {
           </div>
         </div>
         {/* Address */}
-        <div className="col-lg-3 col-md-6 mb-5">
+        <div className="col-lg-3 col-md-6">
           <div className="contact-card text-center">
             <div className="icon-wrapper mb-3 rounded-circle ">
               <Mail size={40} className="contact-icon" />
@@ -38,7 +38,7 @@ export const Contact = () => {
         </div>
 
         {/* Email Us */}
-        <div className="col-lg-3 col-md-6 mb-5">
+        <div className="col-lg-3 col-md-6">
           <div className="contact-card text-center">
             <div className="icon-wrapper mb-3 rounded-circle">
               <MapPin size={40} className="contact-icon" />
@@ -53,7 +53,7 @@ export const Contact = () => {
         </div>
 
         {/* Opening Hours */}
-        <div className="col-lg-3 col-md-6 mb-5">
+        <div className="col-lg-3 col-md-6">
           <div className="contact-card text-center">
             <div className="icon-wrapper mb-3 rounded-circle">
               <Clock size={40} className="contact-icon" />

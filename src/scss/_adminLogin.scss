@@ -1,0 +1,36 @@
+.bgLogin {
+    background-color: $secondary;
+    height: 100vh;
+
+    .card {
+        // box-shadow: $primaryColor 0px 1px 5px 0px;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, $primaryColor 0px 0px 0px 1px;
+    }
+
+    .login-form {
+        // width: 400px;
+
+        .card-title {
+            color: $primaryColor;
+        }
+
+
+        .form-control:focus {
+            border-color: $primaryColor;
+            box-shadow: 0 0 0 0.2px $primaryColor;
+        }
+
+        .backToHomeDiv {
+
+            .backToHomeLink:hover {
+                color: $primaryColor;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    form {
+        padding: 1rem;
+    }
+
+}
