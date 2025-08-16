@@ -22,7 +22,7 @@ export default function Navbar() {
         <a className="navbar-brand" href="/">
           {/* {/* <BookOpenText */}
           {/* /> */}
-          Noorul islam Academy
+        Noor Ul Islam Academy
         </a>
         {/* Mobile toggle button */}
         <button

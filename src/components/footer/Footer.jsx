@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Twitter, Plus, Youtube } from "lucide-react"
+import { Link } from "react-router"
 export const Footer = () => {
     return (
         <footer className=" text-dark py-4">
@@ -42,27 +43,30 @@ export const Footer = () => {
                         <nav>
                             <ul className="list-unstyled d-flex gap-4 mb-0">
                                 <li>
-                                    <a href="#" className="footerNav text-decoration-none">
+                                    <a href="/" className="footerNav text-decoration-none">
                                         Home
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" className="footerNav text-decoration-none">
+                                    <a href="#about" className="footerNav text-decoration-none">
                                         About
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" className="footerNav text-decoration-none">
+                                    <a href="#courses" className="footerNav text-decoration-none">
                                         Courses
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" className="footerNav text-decoration-none">
+                                    <Link to="/registration" className="footerNav text-decoration-none">
                                         Register
-                                    </a>
+                                    </Link>
+
+
+
                                 </li>
                                 <li>
-                                    <a href="#" className="footerNav text-decoration-none">
+                                    <a href="#contact" className="footerNav text-decoration-none">
                                         Contact
                                     </a>
                                 </li>

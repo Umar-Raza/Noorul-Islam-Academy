@@ -3,12 +3,32 @@ import "./App.scss";
 import Routes from "./pages/Routes";
 import { Bounce, ToastContainer } from "react-toastify";
 import "./config/global"
+import { useEffect, useState } from "react";
+import { Loadaer } from "./components/loader/Loadaer";
 function App() {
+  const [loading, setLoading] = useState(false)
+
+
+  useEffect(() => {
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 4000)
+  }, [])
+
+
   return (
     <>
-      <BrowserRouter>
-        <Routes />
-      </BrowserRouter>
+      {
+        loading ? (
+          <Loadaer />
+        ) :
+          (<BrowserRouter>
+            <Routes />
+          </BrowserRouter>
+          )
+      }
+
 
       <ToastContainer
         position="top-center"
